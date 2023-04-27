@@ -1,0 +1,389 @@
+body{
+    margin: 0;
+    padding: 0;
+    margin: auto;
+    align-items: center;
+    background: #fefefe;
+}
+
+h1, h2, h3{
+    text-align: center;
+}
+
+/* sizing my logo */
+header img {
+    width: 280px;
+    height: 200px;
+}
+
+/* the main element holds all the content below the header */
+main {
+    background: #f6dab4;
+    height: fit-content;
+
+}
+/* I used flexbox to center my menu */
+header{
+    display: flex;
+    justify-content: center;
+    background: #ffffff;
+    margin-top: 40px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}
+
+/* targets the elements with class "paragraph", I just wanted to style all the paragraph section rather than each individual paragraph */
+.paragraphs{
+    width: 800px;
+    margin: auto;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: larger;
+    font-stretch: condensed;
+}
+
+p {
+    text-indent: 2em;
+    line-height: 30px;
+}
+
+
+/* I used a class to target a specific p tag because I wanted it to be styled differently than others */
+.sign-up{
+    text-indent: 0;
+    padding-top: 50px;
+    display: block;
+    margin: auto;
+    width: 600px;
+    font-size: 2em;
+    font-weight: bold;
+    font-family:serif;
+    text-align: center;
+
+}
+
+/* styling the nav bar, used flexboc to get it centered */
+nav{
+    width: 100%;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    border-bottom: 1px solid rgb(163, 158, 158);
+    height: 50px;
+    line-height: 50px;
+    background: rgb(255, 255, 255);
+}
+
+/* Wanted to target the block of list items rather than each one, for positioning */
+nav ul {
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: inline;
+    padding-left: 60px;
+    margin-left: -100px;
+  }
+
+  /* styles for individual list items */
+  nav li {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-family:Arial, Helvetica, sans-serif;
+  }
+  
+
+
+a{
+    text-decoration: none;
+
+}
+/* styling for hovering over menu items */
+
+li a:hover:not(.active) {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    background-color:rgb(90, 49, 49);
+    border-radius: 10px;
+
+  }
+
+  nav ul li{
+    list-style: none;
+    float:left;
+    position: relative;
+
+
+}
+
+nav ul li a{
+    display: block;
+    padding: 0px 20px;
+    color: rgb(94, 62, 62);
+    font-weight:bold;
+    font-size: larger;
+
+}
+
+nav ul li ul{
+    display: none;
+    position: absolute;
+    background-color: rgb(196, 159, 124);
+    border-radius: 7px;
+    width: fit-content;
+
+}
+
+nav ul li:hover ul{
+    display: block;
+    padding-right: 25px;
+}
+
+
+nav ul li ul li{
+    width: 80px;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+nav ul li ul li a{
+    padding: 0px 0px;
+    margin-left: -30px;
+}
+
+/* carousel window styling. Overflow hidden crops extra content */
+.slider {
+    width: 800px;
+    height: 500px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin: auto;
+    margin-top: 40px;
+}
+
+.slides {
+    width: 500%;
+    height: 500px;
+    display: flex;
+}
+
+.slides input {
+    display: none;
+}
+
+.slide{
+    width: 20%;
+    transition: 2s;
+}
+
+
+.slide img{
+    width: 800px;
+    height: 500px;
+}
+
+
+/* styles the Autoplay navigation buttons */
+.navigation-auto {
+    position: absolute;
+    display: flex;
+    width: 800px;
+    justify-content: center;
+    margin-top: 460px;
+}
+
+.navigation-auto div {
+    border: 3px solid #ff9900;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+}
+
+.navigation-auto div:not(:last-child) {
+    margin-right: 40px;
+}
+
+#radio1:checked ~ .navigation-auto .auto-btn1 {
+    background-color: #ff9900;
+}
+#radio2:checked ~ .navigation-auto .auto-btn2 {
+    background-color: #ff9900;
+}
+#radio3:checked ~ .navigation-auto .auto-btn3 {
+    background-color: #ff9900;
+}
+
+
+/* styling the manual nav buttons because we need them to stand out against each other. Used cursor to show that they're clickable */
+.navigation-manual {
+    position: absolute;
+    width: 800px;
+    margin-top: -50px;
+    display: flex;
+    justify-content: center;
+}
+
+.manual-btn {
+    border: 3px solid #180101;
+    padding: 5px;
+    border-radius: 10px;
+    transition: 1s;
+    cursor: pointer;
+}
+
+.manual-btn:not(:last-child) {
+    margin-right: 40px;
+}
+
+.manual-btn:hover {
+    background: #d6b481;
+}
+
+
+/* for manual clicks, this moves one picture over to show the other one */
+#radio1:checked ~ .first {
+    margin-left: 0;
+}
+#radio2:checked ~ .first {
+    margin-left: -20%;
+}
+#radio3:checked ~ .first {
+    margin-left: -40%;
+}
+
+
+footer{
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 0, 0);
+    font-family: 'Prompt', sans-serif;
+    font-size: 20px;
+    height: 60px;
+
+}
+.footer{
+   text-align: center;
+   margin-top: 0px;
+   padding-top: 15px;
+}
+
+
+
+/*newsletter*/
+
+form{
+    padding:  0 60px 65px 60px;
+    width: 50%;
+    margin: auto;
+}
+
+
+#email_feedback {
+    color: rgb(241, 147, 147);
+    font-size: 20px;
+    background-image: url('../img/warning.png');
+    background-repeat: no-repeat;
+    background-position: 2px 14px;
+    padding: 10px 0 0 22px;
+}
+
+img{
+    height: 4px;
+    width: 4px;
+}
+label {
+    color: rgb(0, 0, 0);
+    display: block;
+    margin: 10px 0 10px 0; 
+    font-size: 20px;
+    font-family:Georgia, 'Times New Roman', Times, serif
+
+}
+
+#name_label{
+    margin-top: 50px;
+}
+    
+input[type='text']{
+    background-color: rgb(243, 237, 237);
+    color: #666;
+    font-family: 'Oswald', 'Futura',sans-serif;
+    font-size: 24px;
+    width: 96%;
+    padding: 4px 6px;
+    border: 1px solid rgb(0, 0, 0); 
+    border-radius: 8px;
+} 
+
+/* when the field is clicked */
+input[type='text']:focus{
+    border: 1px solid #fff;
+    background-color: #fff;
+    outline: none;
+}
+
+
+input[type='submit']{
+    background-color: #99662c; 
+    color: #f3dad1;
+    border: none;
+    border-radius: 5px;
+    padding: 8px 10px; 
+    margin-top: 10px; 
+    float: right;
+    font-size: 18px;
+    text-decoration: none; 
+    text-transform: uppercase;
+    }
+/* hovering over submit button */
+input[type='submit']:hover{
+    background-color: #d7a053;
+    color: #f3dad1;
+    cursor: pointer;
+    box-shadow: none;
+    position: relative;
+    top: 1px;
+    }
+
+/* img class to style images with class="featured"*/
+.images {
+    box-sizing: border-box;
+  }
+
+/* trying to get the images to display side by side */
+  .column {
+    float: left;
+    width: 32%;
+    padding: 5px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 20px;
+  }
+  
+  /* Clearfix (clear floats) */
+  .row::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+
+  /* I was using id's to target specific elements so that the same elements on other pages would not be affected */
+
+  .featured{
+      width: 95%;
+      height: 95%;
+      border-radius: 15px;
+      border: 5px solid black;
+  }
+
+  .featured:hover{
+      width: 98%;
+      height: 98%;
+      cursor: pointer;
+  }
+
+  .main_img{
+      display: block;
+      margin: auto;
+      height: 100%;
+      width: 45%;
+      border-radius: 15px;
+  }
